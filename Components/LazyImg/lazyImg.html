@@ -1,0 +1,14 @@
+<style>
+div img {
+  visibility: hidden;
+  opacity:0;
+  transition:all linear .5s;
+}
+div img.fade-in {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+<div style="background-image: url({{$ctrl.image.background}});background-size:{{$ctrl.image.size.width}}px {{$ctrl.image.size.height}}px; background-repeat:no-repeat; ">
+  <img ng-src="{{$ctrl.image.source}}" imageonload width="{{$ctrl.image.size.width}}px" height="{{$ctrl.image.size.height}}px"/>
+</div>
